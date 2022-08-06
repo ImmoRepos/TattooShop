@@ -59,6 +59,7 @@ namespace TattooStudio
             if(CommitData == null)
             {
                 SendNuiMessage(Newtonsoft.Json.JsonConvert.SerializeObject(new NUICommand("clear")));
+                ClearPedDecorations(Game.PlayerPed.Handle);
             } else
             {
                 SendNuiMessage(Newtonsoft.Json.JsonConvert.SerializeObject(new NUICommand("save", CommitData)));
